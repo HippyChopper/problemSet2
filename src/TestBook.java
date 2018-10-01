@@ -8,6 +8,7 @@ public class TestBook {
         Scanner input = new Scanner(System.in);
         JTextArea textArea = new JTextArea(30, 10);
         Font font = new Font("Monospaced",Font.PLAIN, 12);
+        textArea.setFont(font);
 
         favBook.setTitle(getFav());
         favBook.setPrice(getPrice());
