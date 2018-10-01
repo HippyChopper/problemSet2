@@ -6,10 +6,10 @@ public class Book {
 
     //accessor methods
 
-    public String getTitle(){return title;};
-    public int getNumPages(){return numPages;};
-    public String getIsbn() {return isbn;};
-    public double getPrice(){return price;};
+    public String getTitle(){return title;}
+    public int getNumPages(){return numPages;}
+    public String getIsbn() {return isbn;}
+    public double getPrice(){return price;}
 
     // mutator
 
@@ -35,7 +35,8 @@ public class Book {
         this.isbn = "No ISBN";
         this.price = 0;
     }
-
+        //second constructor which takes 4 arguments
+        //representing the 4 attributes and calls the mutator methods directly.
     public Book(String titleEntry, int numPagesEntry, String isbnEntry, double priceEntry){
 
         // two ways of doing it. better off (for me) to use set and get. easier to remember
@@ -50,10 +51,14 @@ public class Book {
         setTitle(titleEntry);
         setIsbn(isbnEntry);
         setNumPages(numPagesEntry);
-        setPrice(price);
+        setPrice(priceEntry);
 
     }
+public String toString()
+{
+    return "Title: " + title + "\nISBN: "+ isbn+ "\nPrices: "+ price + "\nNumber of Pages: " + numPages;
 
+}
 
 }
 
