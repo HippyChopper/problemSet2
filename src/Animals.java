@@ -3,7 +3,7 @@ import javax.swing.*;
 public class Animals {
 
     private String type;
-    private String continents;
+    private String[] continents = new String[5];
     private double weight;
     private int age;
 
@@ -15,8 +15,10 @@ public class Animals {
         this.type = type;
     }
 
-    public void setContinents(String continents) {
+    public void setContinents(String[] continents)
+    {
         this.continents = continents;
+
     }
 
     public void setAge(int age) {
@@ -35,8 +37,9 @@ public class Animals {
         return type;
     }
 
-    public String getContinents() {
-        continents = JOptionPane.showInputDialog("enter the continent of the animal?");
+    public String[] getContinents() {
+
+
         return continents;
     }
 
@@ -63,7 +66,7 @@ public class Animals {
 
     //4 arguement constructer
 
-    public Animals(String typeData, String continentsData, int ageData, float weightData)
+    public Animals(String typeData, String continentsData[], int ageData, float weightData)
     {
         setType(typeData);
         setContinents(continentsData);
