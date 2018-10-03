@@ -3,13 +3,13 @@ import javax.swing.*;
 public class Animals {
 
     private String type;
-    private String[] continents = new String[5];
+    private String[] continents;
     private double weight;
     private int age;
 
 
 
-    //getters
+    //setters
 
     public void setType(String type) {
         this.type = type;
@@ -38,8 +38,10 @@ public class Animals {
     }
 
     public String[] getContinents() {
-
-
+    String[] continents = new String[4];
+        for (int i = 0; i < continents.length; i++){
+            continents[i] = JOptionPane.showInputDialog("please enter the continent:");
+        }
         return continents;
     }
 
@@ -78,6 +80,18 @@ public class Animals {
 
     @Override
     public String toString() {
-        return "Type: "+ type + "\nContinent: " + continents + "\n Age: " + age + "\nweight: " + weight;
+
+        String conts="";
+
+        if (conts!= null){
+
+            for (int i = 0;i <continents.length; i++)
+            {
+                conts+= continents[i] + ", ";
+            }
+
+        }
+        else conts = "no continents specified";
+        return "Type: "+ type + "\nContinent: " + conts+ "\n Age: " + age + "\nweight: " + weight;
     }
 }
