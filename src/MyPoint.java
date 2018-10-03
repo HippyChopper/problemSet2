@@ -56,10 +56,12 @@ public class MyPoint {
         String moveXAsString = JOptionPane.showInputDialog("Please enter the distance you would like x to move to");
        int xValMoved = Integer.parseInt(moveXAsString);
 
+       xVal = xVal+ xValMoved;
+
         //String moveYAsString = JOptionPane.showInputDialog("Please enter the distance you would like x to move to");
         //yVal = Integer.parseInt(moveYAsString);
 
-         return xValMoved;
+         return xVal;
     }
 
     public int moveVertically(int y)
@@ -69,17 +71,17 @@ public class MyPoint {
          int yValMoved = Integer.parseInt(moveYAsString);
 
 
+        yVal = yVal+ yValMoved;
 
-
-        return yValMoved;
+        return yVal;
     }
 
     @Override
     public String toString() {
 
 
-        return "Point x: " + xVal + "\nPoint y: "+ yVal + "\nMoved point X "+ moveHorizontally(getyVal())+
-                "\nMoved Point Y" + moveVertically(getyVal());
+        return "Point x: " + getxVal() + "\nPoint y: "+ getyVal() + "\nMoved point X "+ moveHorizontally(xVal)+
+                "\nMoved Point Y" + moveVertically(yVal);
     }
 
 
