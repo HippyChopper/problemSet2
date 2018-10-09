@@ -5,6 +5,7 @@ public class Film {
     private String title;
     private String director;
     private int duration;
+    private int count = 2;
 
 
     //no arguement
@@ -13,28 +14,35 @@ public class Film {
         this.title ="title";
         this.director = "director";
         this.duration = 0;
+        this.count = 2;
     }
 
     public Film(String title, String director,int duration){
         setTitle(title);
         setDirector(director);
         setDuration(duration);
+
     }
 
     //getters
 
+
+    public int getCount() {
+        return count;
+    }
+
     public  String getTitle() {
-    title = JOptionPane.showInputDialog(null,"enter title here");
+
         return title;
     }
 
     public String getDirector() {
-        director = JOptionPane.showInputDialog(null,"enter director here");
+
         return director;
     }
 
     public int getDuration() {
-        duration=Integer.parseInt( JOptionPane.showInputDialog(null,"enter duration here"));
+
         return duration;
     }
 
@@ -56,7 +64,7 @@ public class Film {
     @Override
     public String toString() {
 
-        return "Film: " + title + "\nDirector: " + director + "\nDuration: " + duration + "mins";
+        return "Film: " + title + "\nDirector: " + director + "\nDuration: " + duration + "mins\n";
     }
 }
 
